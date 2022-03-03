@@ -1,0 +1,2522 @@
+{
+	"info": {
+		"_postman_id": "4230f7bf-564d-4e6e-9c10-be04a5a1e430",
+		"name": "SIMTR - API do sistema SIMTR",
+		"description": "Lista de APIs do SIMTR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "dossie-digital",
+			"item": [
+				{
+					"name": "Solicitação de Autorização Documental",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJNRmVKNjVfRC14cU55M1Zta01Ib01WS1NjZlA3S21ZazdtVjBJaEsta0F3In0.eyJqdGkiOiI1ZTU3MDEwOC05N2Q5LTQzMzUtYTQ0My02OTUwYmU5MzVlZDQiLCJleHAiOjE1NTQzMjk1NzYsIm5iZiI6MCwiaWF0IjoxNTU0MzI5Mjc2LCJpc3MiOiJodHRwczovL2xvZ2luLmRlcy5jYWl4YS9hdXRoL3JlYWxtcy9pbnRyYW5ldCIsImF1ZCI6ImNsaS13ZWItcG5jIiwic3ViIjoiNzFmNzRkOWUtMjg5MS00MzJlLTkwODktOTNiZDA3NTljYWU3IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiY2xpLXdlYi1wbmMiLCJhdXRoX3RpbWUiOjE1NTQzMjMyNTQsInNlc3Npb25fc3RhdGUiOiIwMzE2Yjk3ZS02ZTc1LTRkODgtYjZlYi01NzBhODk1NWU0ZGEiLCJhY3IiOiIwIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vMTcyLjE2LjE0MS4yMDg6ODAwNiIsImh0dHA6Ly8xMC4yLjEuMTEzOjQyMDAiLCJodHRwczovL2xvY2FsaG9zdDo0MjAwIiwiaHR0cHM6Ly93d3cuZ2V0cG9zdG1hbi5jb20iLCJodHRwOi8vbmVnb2Npb3MuY2FpeGEiLCJodHRwOi8vMTAuMi4xLjEwNjo0MjAwIiwiaHR0cHM6Ly8xMC4xMTYuOTguNTY6ODAwNiIsImh0dHBzOi8vMTAuMTE2Ljk4LjU2OjgwMTMiLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwczovLzEwLjExNi44Mi42MiIsImh0dHBzOi8vbmVnb2Npb3MuY2FpeGEiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlBOQ0NMTSIsIlBOQ0NERSIsIlBOQ0NDQSIsIlBOQ0NPTiIsIlBOQ0NFUCIsIlBOQ1BDQSIsIlBOQ0NETyIsIkJSSl9TRkdfSU5GT1JNQUNPRVNfRkdUU19BUEkiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIlBOQ0NCRSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7fSwibmFtZSI6IlVzdWFyaW8gVGVzdGUgU0lQQU4gVGVzdGUgU0lQQU4iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjODk3OTk4IiwiZ2l2ZW5fbmFtZSI6IlVzdWFyaW8gVGVzdGUgU0lQQU4iLCJmYW1pbHlfbmFtZSI6IlRlc3RlIFNJUEFOIiwiZW1haWwiOiJjODk3OTk4QG1haWwuY2FpeGEifQ.yQxsVw8_Plmq9AB8q1bmsSZ5XNsVv9BHidsWZrCDDoEizJzH0Fe014EwHo4Q2WcpHD-wSN1R3hhMeIn_XOai_X3VVQ0n75JRjREQJe_Amm1WFerFnAzMT3zTJlBjL85rVpnIFw_b4LukTMqx_YtyH5tblh2UuqCBfZZxJZHgUToEEkSRSh51OppBuZ0-9GY-H5OGYCZopEdX9c3pJp62GUNPLDrux9i0Vgre1A7BTdUsm9ugqp6gdcA0Ld2OTN8nB-Wt50K1opgrv4QWUUZrup_J3muwDN3X5i2ViJOUCbjBQdZyN6rdzAd0B726lmXECuOsB0Rl2N_50o1zFa__DQ",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cpf_cliente\": 39936805,\r\n  \"integracao\": 123456789,\r\n  \"operacao\": 1,\r\n  \"modalidade\": 0\r\n}"
+						},
+						"url": {
+							"raw": "http://10.123.15.51:8080/simtr-api/rest/dossie-digital/v1/autorizacao ",
+							"protocol": "http",
+							"host": [
+								"10",
+								"123",
+								"15",
+								"51"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"autorizacao "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extração de dados da imagem do documento (OCR)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/documento/extracao-dados",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"documento",
+								"extracao-dados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura as informações disponiveis do SICLI perante a integração com o SIMTR baseado no CPF do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/cpf/:cpfCnpj/sicli",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"cpf",
+								":cpfCnpj",
+								"sicli"
+							],
+							"variable": [
+								{
+									"key": "cpfCnpj",
+									"value": "{{cpfCnpj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Geração do documento de cartão de assinatura digitalizado para coleta da assinatura do cliente.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/documento/cartao-assinatura/cpf/:cpf",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"documento",
+								"cartao-assinatura",
+								"cpf",
+								":cpf"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "{{cpf}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FGTS",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJNRmVKNjVfRC14cU55M1Zta01Ib01WS1NjZlA3S21ZazdtVjBJaEsta0F3In0.eyJqdGkiOiJlNGQ4MDRhYi0zNTU4LTRjMjctOWU0OC04MDIzNWU1NjE4NWMiLCJleHAiOjE1NDUwNjkxOTIsIm5iZiI6MCwiaWF0IjoxNTQ1MDY4ODkyLCJpc3MiOiJodHRwczovL2xvZ2luLmRlcy5jYWl4YS9hdXRoL3JlYWxtcy9pbnRyYW5ldCIsImF1ZCI6ImNsaS13ZWItbXRyIiwic3ViIjoiZjI2M2U3NWMtMmJlYy00MWVkLWFmNDgtODk3NDkyMWYwMmFjIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiY2xpLXdlYi1tdHIiLCJhdXRoX3RpbWUiOjE1NDUwNjg4OTAsInNlc3Npb25fc3RhdGUiOiI4NTcxYTdjYy1lNDM4LTQ2YzUtYjI5OC1kMGE2ODc1MDliMWIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9kb3NzaWUuZGVzLnBlZGVzLmNhaXhhIiwiaHR0cHM6Ly9zaW10ci1kb3NzaWUtZGV2Lm5wcmQyLmNhaXhhIiwiaHR0cDovL3NpbXRyLnRzdC5wZWRlcy5jYWl4YSIsImh0dHA6Ly9zaW10ci5obXAucGVkZXMuY2FpeGEiLCJodHRwOi8vc2ltdHItZG9zc2llLXRxcy5ucHJkMi5jYWl4YSIsImh0dHA6Ly9sb2NhbGhvc3QiLCJodHRwOi8vc2ltdHItZG9zc2llLWhtcC5ucHJkMi5jYWl4YSIsImh0dHA6Ly9zaW10ci1kb3NzaWUtZGV2Lm5wcmQyLmNhaXhhIiwiaHR0cDovL2Rvc3NpZS5obXAucGVkZXMuY2FpeGEiLCJodHRwOi8vc2ltdHIuZ2ViYW4uY2FpeGEiLCJodHRwOi8vZ283ODc1ZXQxNDgiLCJodHRwOi8vc2ltdHItdHFzLm5wcmQyLmNhaXhhIiwiaHR0cDovL2Rvc3NpZS50c3QucGVkZXMuY2FpeGEiLCJodHRwczovL3NpbXRyLWRvc3NpZS1obXAubnByZDIuY2FpeGEiLCJodHRwOi8vc2ltdHIuZGVzLnBlZGVzLmNhaXhhIiwiaHR0cDovL3Byb3RvdGlwb2Rvc3NpZS5kZXMucGVkZXMuY2FpeGEiLCJodHRwOi8vc2ltdHItZGV2Lm5wcmQyLmNhaXhhIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJTRVRfU0VSVklDTyIsImVjbV91c2VyIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6e30sImNvLXVuaWRhZGUiOiIwMDAyIiwibnUtZnVuY2FvIjoiMjIzMSIsInNlcnZpY2VfdXNlcm5hbWUiOiJTTVRSUEVTRCIsIm51LWNwZiI6IjAwOTI2NTI4Nzc3IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYzg5Nzk5OCIsImdpdmVuX25hbWUiOiJUZXN0ZSIsImZhbWlseV9uYW1lIjoiU0lQTkMxIiwibnUtbG90YWNhb2Zpc2ljYSI6IjAwMDIiLCJlbWFpbCI6ImM4OTc5OThAbWFpbC5jYWl4YSJ9.X2nAHXrFMvzIBBkAkbC6DIstf7Jcz4DmkXiQcaQwU5j_UhHShOtMsNhBQ4Pa0r6J6LUlTeX0jK2awh9fB840k_-SpBZ0NSRZOYSSgoqsLD4jhKDuZd6PF_yXbn3lKpn0a0qhBgPy2sogagoofkQgDevz0kslDT4gUtgDssBJb2kwLswU5Hyib4vunwXbWZ_bO1L18YuLiTDWT0P0DaARn3xsIb0G7tJhvmiqiJviJl2btUqr2L7kRrOKUPSauRqaiLSEalqBBnsh7si3pGHhRc6lxAs7ZPoMEQjjqEKowmHJ7aMBSAZ-9D4NYg8IbHfOKnnHCG8YlIlykL0Euiz7oQ",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.des.caixa:8443/fgts/trabalhador",
+							"protocol": "https",
+							"host": [
+								"api",
+								"des",
+								"caixa"
+							],
+							"port": "8443",
+							"path": [
+								"fgts",
+								"trabalhador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encaminhamento do cartão de assinatura digitalizado para guarda do documento.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/documento/cartao-assinatura",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"documento",
+								"cartao-assinatura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização dos dados cadastrais do cliente perante o SICLI com guarda permanente dos documentos.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/cadastro/atualizacao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"cadastro",
+								"atualizacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitação de emissão de minutas de documento para conferência/emissão por parte do solicitante.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/documento/minuta",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"documento",
+								"minuta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitação de guarda de documentos da operação inculados a autorização encaminhada.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/operacao/documentos-guarda",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"operacao",
+								"documentos-guarda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajustes nos dados extraidos do documento.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/documento/atualizacao-dados",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"documento",
+								"atualizacao-dados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encaminhamento dos dados declarados emissão e guarda do documento.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/documento/dados-declarados",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"documento",
+								"dados-declarados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura as informações disponiveis do SICLI perante a integração com o SIMTR baseado no CNPJ do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/dossie-digital/v1/cnpj/:cpfCnpj/sicli",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"dossie-digital",
+								"v1",
+								"cnpj",
+								":cpfCnpj",
+								"sicli"
+							],
+							"variable": [
+								{
+									"key": "cpfCnpj",
+									"value": "{{cpfCnpj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for dossie-digital"
+		},
+		{
+			"name": "negocio",
+			"item": [
+				{
+					"name": "Retorna os motivos possiveis para classificar um documento como rejeitado.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/documento/situacao/rejeitado/motivo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"documento",
+								"situacao",
+								"rejeitado",
+								"motivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura o conteudo de um documento solicitado junto ao GED, converte para base64 no formato de armazenamento submetido.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/documento/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"documento",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista a tipologia documental definida para o sistema. Possui uma lista pela ótica das funções e uma lista pelo ótica do tipo de documento.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/documento/tipologia",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"documento",
+								"tipologia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura o tipo de documento especificado pelo identificador informado.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/documento/tipo/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"documento",
+								"tipo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura o dossiê de cliente baseado no CPF do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/cpf/:cpf",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								"cpf",
+								":cpf"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "{{cpf}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura as informações disponiveis do SICLI perante a integração com o SIMTR baseado no CPF do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/cpf/:cpf/sicli",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								"cpf",
+								":cpf",
+								"sicli"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "{{cpf}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura as informações disponiveis do SICPF perante a integração com o SIMTR baseado no CPF do cliente.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/cpf/:cpf/sicpf",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								"cpf",
+								":cpf",
+								"sicpf"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "{{cpf}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura o dossiê de cliente baseado no CNPJ do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/cnpj/:cnpj",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								"cnpj",
+								":cnpj"
+							],
+							"variable": [
+								{
+									"key": "cnpj",
+									"value": "{{cnpj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclui um documento encaminhados para armazenamento em um Dossiê de Cliente.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/:id/documento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								":id",
+								"documento"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exclui um documento ainda não utilizado juntamente com seu vinculo com o Dossiê de Cliente. Caso em uso, inabilita para novos negócios.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/:idCliente/documento/:idDocumento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								":idCliente",
+								"documento",
+								":idDocumento"
+							],
+							"variable": [
+								{
+									"key": "idCliente",
+									"value": "{{idCliente}}"
+								},
+								{
+									"key": "idDocumento",
+									"value": "{{idDocumento}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastra um novo Dossiê de Cliente conforme informações existentes no objeto.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura o dossiê de cliente baseado no ID do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza as informações de um Dossiê de Cliente.",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura as informações disponiveis do SICLI perante a integração com o SIMTR baseado no CNPJ do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossiecliente/cnpj/:cnpj/sicli",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossiecliente",
+								"cnpj",
+								":cnpj",
+								"sicli"
+							],
+							"variable": [
+								{
+									"key": "cnpj",
+									"value": "{{cnpj}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura um Dossiê de Produto baseado no seu ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossieproduto/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossieproduto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenta capturar um Dossiê de Produto baseado no seu ID em modo de alteração.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossieproduto/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossieproduto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização de informações de um Dossiê de Produto",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossieproduto/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossieproduto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastra um novo Dossiê de Produto.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossieproduto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossieproduto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura um dossiê de produto para tratamento incluindo uma nova siuação \"Em Tratamento\" vinculada ao mesmo.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossieproduto/tratamento/processo/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossieproduto",
+								"tratamento",
+								"processo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna um Dossiê que estava na situação \"Em Tratamento\" para a situação \"Aguardando Tratamento\"",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/dossieproduto/:id/retornafilatratamento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"dossieproduto",
+								":id",
+								"retornafilatratamento"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Captura o processo especificado com toda a hierarquia do mesmo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/processo/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"processo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista os processos patriarcas com toda a hierarquia dos mesmos.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/processo/patriarca",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"processo",
+								"patriarca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista os processos com o quantitativo de dossiês para tratamento de acordo com o usuário solicitante.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/negocio/v1/tratamento/processo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"negocio",
+								"v1",
+								"tratamento",
+								"processo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for negocio"
+		},
+		{
+			"name": "processoadministrativo",
+			"item": [
+				{
+					"name": "Consulta de Apenso Administrativo pelo Protocolo SICLG",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/apenso/protocolosiclg/:protocolo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"apenso",
+								"protocolosiclg",
+								":protocolo"
+							],
+							"variable": [
+								{
+									"key": "protocolo",
+									"value": "{{protocolo}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclusão de Apenso Administrativo vinculado a um Processo Administrativo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/:idProcesso/apenso",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								":idProcesso",
+								"apenso"
+							],
+							"variable": [
+								{
+									"key": "idProcesso",
+									"value": "{{idProcesso}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Apenso Administrativo pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/apenso/:idApenso",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"apenso",
+								":idApenso"
+							],
+							"variable": [
+								{
+									"key": "idApenso",
+									"value": "{{idApenso}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização de informações de um Apenso Administrativo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/apenso/:idApenso",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"apenso",
+								":idApenso"
+							],
+							"variable": [
+								{
+									"key": "idApenso",
+									"value": "{{idApenso}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclusão de Apenso Administrativo vinculado a um Contrato Administrativo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/contrato/:idContrato/apenso",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"contrato",
+								":idContrato",
+								"apenso"
+							],
+							"variable": [
+								{
+									"key": "idContrato",
+									"value": "{{idContrato}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exporta Apenso Administrativo pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/zip"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/apenso/:idApenso/exportar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"apenso",
+								":idApenso",
+								"exportar"
+							],
+							"variable": [
+								{
+									"key": "idApenso",
+									"value": "{{idApenso}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclusão de Documento Administrativo vinculado a um Apenso Administrativo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/apenso/:id/documento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"apenso",
+								":id",
+								"documento"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização de informações de um Contrato Administrativo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/contrato/:idContrato",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"contrato",
+								":idContrato"
+							],
+							"variable": [
+								{
+									"key": "idContrato",
+									"value": "{{idContrato}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclusão de Contrato Administrativo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/:idProcesso/contrato",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								":idProcesso",
+								"contrato"
+							],
+							"variable": [
+								{
+									"key": "idProcesso",
+									"value": "{{idProcesso}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Contrato Administrativo pelo Numero/Ano",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/contrato/numero/:numeroContrato-:anoContrato",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"contrato",
+								"numero",
+								":numeroContrato-:anoContrato"
+							],
+							"variable": [
+								{
+									"key": "numeroContrato",
+									"value": "{{numeroContrato}}"
+								},
+								{
+									"key": "anoContrato",
+									"value": "{{anoContrato}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Contrato Administrativo pela descrção do objeto de contatação.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/contrato/descricao/:descricao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"contrato",
+								"descricao",
+								":descricao"
+							],
+							"variable": [
+								{
+									"key": "descricao",
+									"value": "{{descricao}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exporta Contrato Administrativo pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/zip"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/contrato/:idContrato/exportar/:completo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"contrato",
+								":idContrato",
+								"exportar",
+								":completo"
+							],
+							"variable": [
+								{
+									"key": "idContrato",
+									"value": "{{idContrato}}"
+								},
+								{
+									"key": "completo",
+									"value": "{{completo}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclusão de Documento Administrativo vinculado a um Contrato Administrativo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/contrato/:id/documento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"contrato",
+								":id",
+								"documento"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Contrato Administrativo pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/contrato/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"contrato",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Documento Administrativo pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/documento/:idDocumento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"documento",
+								":idDocumento"
+							],
+							"variable": [
+								{
+									"key": "idDocumento",
+									"value": "{{idDocumento}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização de informações de um Documento Administrativo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/documento/:idDocumento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"documento",
+								":idDocumento"
+							],
+							"variable": [
+								{
+									"key": "idDocumento",
+									"value": "{{idDocumento}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Documento Administrativo pela descrição do documento.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/documento/descricao/:descricao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"documento",
+								"descricao",
+								":descricao"
+							],
+							"variable": [
+								{
+									"key": "descricao",
+									"value": "{{descricao}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exclui um documento administrativo.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/documento/:idDocumento/:justificativa",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"documento",
+								":idDocumento",
+								":justificativa"
+							],
+							"variable": [
+								{
+									"key": "idDocumento",
+									"value": "{{idDocumento}}"
+								},
+								{
+									"key": "justificativa",
+									"value": "{{justificativa}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização de informações de um Processo Administrativo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/:idProcesso",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								":idProcesso"
+							],
+							"variable": [
+								{
+									"key": "idProcesso",
+									"value": "{{idProcesso}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Processo Administrativo pelo Numero/Ano",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/numero/:numero-:ano",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								"numero",
+								":numero-:ano"
+							],
+							"variable": [
+								{
+									"key": "numero",
+									"value": "{{numero}}"
+								},
+								{
+									"key": "ano",
+									"value": "{{ano}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Processo Administrativo pela descrção do objeto de contatação.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/descricao/:descricao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								"descricao",
+								":descricao"
+							],
+							"variable": [
+								{
+									"key": "descricao",
+									"value": "{{descricao}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exporta Processo Administrativo pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml, application/zip"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/:idProcesso/exportar/:completo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								":idProcesso",
+								"exportar",
+								":completo"
+							],
+							"variable": [
+								{
+									"key": "idProcesso",
+									"value": "{{idProcesso}}"
+								},
+								{
+									"key": "completo",
+									"value": "{{completo}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclusão de Documento Administrativo vinculado a um Processo Administrativo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/:id/documento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								":id",
+								"documento"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inclusão de Processo Administrativo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta de Processo Administrativo pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/processo/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"processo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna lista com as permissões do PAE.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/permissoes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"permissoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna lista com os tipos de documento do Processo Administrativo.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, application/xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8080/simtr-api/rest/processoadministrativo/v1/tiposdocumento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"simtr-api",
+								"rest",
+								"processoadministrativo",
+								"v1",
+								"tiposdocumento"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for processoadministrativo"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
